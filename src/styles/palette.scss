@@ -1,0 +1,174 @@
+@import '~@angular/material/core/theming/all-theme';
+/* For use in src/lib/core/theming/_palette.scss */
+$md-middleredpurple: (
+    50 : #e2e1e5,
+    100 : #b7b3be,
+    200 : #878193,
+    300 : #574f67,
+    400 : #332947,
+    500 : #0f0326,
+    600 : #0d0322,
+    700 : #0b021c,
+    800 : #080217,
+    900 : #04010d,
+    A100 : #5151ff,
+    A200 : #1e1eff,
+    A400 : #0000ea,
+    A700 : #0000d0,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$md-azureishwhite: (
+    50 : #fcfdfd,
+    100 : #f6fafa,
+    200 : #f1f6f7,
+    300 : #ebf2f4,
+    400 : #e6f0f1,
+    500 : #e2edef,
+    600 : #dfebed,
+    700 : #dae8eb,
+    800 : #d6e5e8,
+    900 : #cfe0e4,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-burntumber: (
+    50 : #efe7e5,
+    100 : #d8c3be,
+    200 : #be9b93,
+    300 : #a37267,
+    400 : #905447,
+    500 : #7c3626,
+    600 : #743022,
+    700 : #69291c,
+    800 : #5f2217,
+    900 : #4c160d,
+    A100 : #ff9184,
+    A200 : #ff6451,
+    A400 : #ff361e,
+    A700 : #ff2004,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$md-paynesgrey: (
+    50 : #eaedef,
+    100 : #cad3d7,
+    200 : #a7b6bd,
+    300 : #8499a2,
+    400 : #69838e,
+    500 : #4f6d7a,
+    600 : #486572,
+    700 : #3f5a67,
+    800 : #36505d,
+    900 : #263e4a,
+    A100 : #92d9ff,
+    A200 : #5fc7ff,
+    A400 : #2cb5ff,
+    A700 : #13acff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-sunsetorange: (
+    50 : #ffeceb,
+    100 : #ffcfcc,
+    200 : #ffafaa,
+    300 : #fe8f88,
+    400 : #fe776f,
+    500 : #fe5f55,
+    600 : #fe574e,
+    700 : #fe4d44,
+    800 : #fe433b,
+    900 : #fd322a,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffd7d5,
+    A700 : #ffbebc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+/*  TODO define a better palette */
+@include mat-core();
+$primary: mat-palette($md-sunsetorange, 800);
+$accent:  mat-palette($md-paynesgrey, 600, A100, A400);
+$warn:    mat-palette($md-burntumber, 600);
+$theme: mat-dark-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
